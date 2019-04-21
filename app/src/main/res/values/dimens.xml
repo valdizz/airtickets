@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_time_small">16sp</dimen>
+    <dimen name="text_time">18sp</dimen>
+    <dimen name="text_airport">38sp</dimen>
+    <dimen name="text_price">22sp</dimen>
+    <dimen name="text_date">20sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_big">25sp</dimen>
+    <dimen name="activity_margin_left">30dp</dimen>
+    <dimen name="activity_margin_right">30dp</dimen>
+    <dimen name="activity_margin_small_left">16dp</dimen>
+    <dimen name="activity_margin_small_right">16dp</dimen>
+    <dimen name="activity_margin_top">24dp</dimen>
+    <dimen name="activity_margin_top_mid">18dp</dimen>
+    <dimen name="activity_margin_top_small">10dp</dimen>
+    <dimen name="activity_margin_bottom">24dp</dimen>
+    <dimen name="activity_margin_between_horizontal">8dp</dimen>
+    <dimen name="activity_margin_between_big_horizontal">16dp</dimen>
+    <dimen name="activity_margin_between_vertical">24dp</dimen>
+    <dimen name="activity_margin_between_small_vertical">16dp</dimen>
+    <dimen name="activity_line_height">1dp</dimen>
+    <dimen name="activity_fab_bottom_margin">16dp</dimen>
+    <dimen name="activity_fab_top_margin">80dp</dimen>
+</resources>

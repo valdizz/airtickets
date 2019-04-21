@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Air tickets</string>
+    <string name="fragment_1">FRAGMENT 1</string>
+    <string name="fragment_2">FRAGMENT 2</string>
+    <string name="depart_airplane">Depart airplane</string>
+    <string name="depart_takeoff">Depart takeoff</string>
+    <string name="depart_trending">Depart trending</string>
+    <string name="depart_land">Depart land</string>
+    <string name="depart_flight_time">Depart flight time</string>
+    <string name="return_airplane">Return airplane</string>
+    <string name="return_takeoff">Return takeoff</string>
+    <string name="return_trending">Return trending</string>
+    <string name="return_land">Return land</string>
+    <string name="return_flight_time">Return flight time</string>
+</resources>

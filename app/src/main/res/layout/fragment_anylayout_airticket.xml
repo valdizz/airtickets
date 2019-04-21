@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_depart_title"
+                tools:text="DEPART"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_big"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:id="@+id/tv_depart_date"
+                tools:text="16 SEP 2019"
+                android:textColor="@color/colorMidGray"
+                android:textSize="@dimen/text_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|end"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top_mid"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_depart_free_seats"
+                tools:text="Free seats: 3"
+                android:textColor="@color/colorLightGray"
+                android:textSize="@dimen/text_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"/>
+
+        <TextView
+                android:id="@+id/tv_depart_price"
+                tools:text="435 BYN"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="@dimen/text_price"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top_small"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_depart_from"
+                tools:text="MSQ"
+                android:layout_weight="1"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/text_airport"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+        <ImageView
+                android:id="@+id/iv_depart_airplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_airplane_blue_24dp"
+                android:rotation="90"
+                android:contentDescription="@string/depart_airplane"
+                android:gravity="center"/>
+
+        <TextView
+                android:id="@+id/tv_depart_to"
+                tools:text="FLO"
+                android:layout_weight="1"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/text_airport"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_depart_time_takeoff"
+                tools:text="00:20"
+                android:textColor="@color/colorMidGray"
+                android:textSize="@dimen/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_margin_between_horizontal"/>
+
+        <ImageView
+                android:id="@+id/iv_depart_takeoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_flight_takeoff_blue_24dp"
+                android:contentDescription="@string/depart_takeoff"/>
+
+        <ImageView
+                android:id="@+id/iv_depart_trending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_trending_flat_gray_24dp"
+                android:contentDescription="@string/depart_trending"
+                android:layout_marginStart="@dimen/activity_margin_between_big_horizontal"
+                android:layout_marginEnd="@dimen/activity_margin_between_big_horizontal"/>
+
+        <TextView
+                android:id="@+id/tv_depart_time_land"
+                tools:text="09:20"
+                android:textColor="@color/colorMidGray"
+                android:textSize="@dimen/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_margin_between_horizontal"/>
+
+        <ImageView
+                android:id="@+id/iv_depart_land"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_flight_land_blue_24dp"
+                android:contentDescription="@string/depart_land"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                android:gravity="end"
+                tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                    android:id="@+id/iv_depart_flight_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    app:srcCompat="@drawable/ic_flight_time_lightgray_24dp"
+                    android:contentDescription="@string/depart_flight_time"
+                    android:layout_marginEnd="@dimen/activity_margin_between_horizontal"/>
+
+            <TextView
+                    android:id="@+id/tv_depart_flight_time"
+                    tools:text="9:00"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="@dimen/text_time_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+            android:id="@+id/line_depart"
+            android:background="@color/colorLightGray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_line_height"
+            android:layout_marginTop="@dimen/activity_margin_bottom"
+            android:layout_marginStart="@dimen/activity_margin_small_left"
+            android:layout_marginEnd="@dimen/activity_margin_small_right"/>
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_return_title"
+                tools:text="RETURN"
+                android:textColor="@color/colorLightBlue"
+                android:textSize="@dimen/text_big"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:id="@+id/tv_return_date"
+                tools:text="17 SEP 2019"
+                android:textColor="@color/colorMidGray"
+                android:textSize="@dimen/text_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|end"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top_mid"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_return_free_seats"
+                tools:text="Free seats: 5"
+                android:textColor="@color/colorLightGray"
+                android:textSize="@dimen/text_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"/>
+
+        <TextView
+                android:id="@+id/tv_return_price"
+                tools:text="488 BYN"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="@dimen/text_price"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top_small"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_return_from"
+                tools:text="FLO"
+                android:layout_weight="1"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/text_airport"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+
+        <ImageView
+                android:id="@+id/iv_return_airplane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_airplane_blue_24dp"
+                android:rotation="90"
+                android:contentDescription="@string/depart_airplane"
+                android:gravity="center"/>
+
+        <TextView
+                android:id="@+id/tv_return_to"
+                tools:text="MSQ"
+                android:layout_weight="1"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/text_airport"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_top"
+            android:paddingStart="@dimen/activity_margin_left"
+            android:paddingEnd="@dimen/activity_margin_left"
+            android:orientation="horizontal">
+
+        <TextView
+                android:id="@+id/tv_return_time_takeoff"
+                tools:text="05:10"
+                android:textColor="@color/colorMidGray"
+                android:textSize="@dimen/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_margin_between_horizontal"/>
+
+        <ImageView
+                android:id="@+id/iv_return_takeoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_flight_takeoff_blue_24dp"
+                android:contentDescription="@string/depart_takeoff"/>
+
+        <ImageView
+                android:id="@+id/iv_return_trending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_trending_flat_gray_24dp"
+                android:contentDescription="@string/depart_trending"
+                android:layout_marginStart="@dimen/activity_margin_between_big_horizontal"
+                android:layout_marginEnd="@dimen/activity_margin_between_big_horizontal"/>
+
+        <TextView
+                android:id="@+id/tv_return_time_land"
+                tools:text="09:20"
+                android:textColor="@color/colorMidGray"
+                android:textSize="@dimen/text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_margin_between_horizontal"/>
+
+        <ImageView
+                android:id="@+id/iv_return_land"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_flight_land_blue_24dp"
+                android:contentDescription="@string/depart_land"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                android:gravity="end"
+                tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                    android:id="@+id/iv_return_flight_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    app:srcCompat="@drawable/ic_flight_time_lightgray_24dp"
+                    android:contentDescription="@string/depart_flight_time"
+                    android:layout_marginEnd="@dimen/activity_margin_between_horizontal"/>
+
+            <TextView
+                    android:id="@+id/tv_return_flight_time"
+                    tools:text="4:10"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="@dimen/text_time_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+            android:id="@+id/line_return"
+            android:background="@color/colorLightGray"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_line_height"
+            android:layout_marginTop="@dimen/activity_margin_bottom"
+            android:layout_marginStart="@dimen/activity_margin_small_left"
+            android:layout_marginEnd="@dimen/activity_margin_small_right"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:backgroundTint="@color/colorGreen"
+            app:srcCompat="@drawable/ic_check_white_24dp"
+            android:layout_marginTop="@dimen/activity_fab_top_margin"
+            android:layout_marginBottom="@dimen/activity_fab_bottom_margin"
+            android:layout_gravity="center_horizontal"/>
+</LinearLayout>
