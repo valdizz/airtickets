@@ -8,6 +8,11 @@ import androidx.fragment.app.Fragment
 import com.valdizz.airtickets.entity.FlightShedule
 import kotlinx.android.synthetic.main.fragment_constraint_airticket.view.*
 
+/**
+ * Fragment class. The fragment layout uses only ConstraintLayout.
+ *
+ * @author Vlad Kornev
+ */
 class ConstraintAirTicketFragment : Fragment(){
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

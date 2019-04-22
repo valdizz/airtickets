@@ -9,6 +9,12 @@ import com.valdizz.airtickets.entity.FlightShedule
 import com.valdizz.airtickets.entity.FlightType
 import kotlinx.android.synthetic.main.activity_airticket.*
 
+/**
+ * Main class with container for two fragments.
+ * The activity layout contains two buttons which responsible for navigation between fragments.
+ *
+ * @author Vlad Kornev
+ */
 class AirTicketActivity : AppCompatActivity() {
 
     private val flightData = createData()

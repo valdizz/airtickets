@@ -3,6 +3,11 @@ package com.valdizz.airtickets.entity
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
+/**
+ * Data class with flight information.
+ *
+ * @author Vlad Kornev
+ */
 @Parcelize
 data class Flight(
     val flightType: FlightType,
