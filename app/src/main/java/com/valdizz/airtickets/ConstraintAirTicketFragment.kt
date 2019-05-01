@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.valdizz.airtickets.entity.ChangeDayNightModeListener
 import com.valdizz.airtickets.entity.FlightShedule
 import kotlinx.android.synthetic.main.fragment_anylayout_airticket.*
 import kotlinx.android.synthetic.main.fragment_constraint_airticket.view.*

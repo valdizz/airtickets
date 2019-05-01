@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import com.valdizz.airtickets.entity.ChangeDayNightModeListener
 import com.valdizz.airtickets.entity.Flight
 import com.valdizz.airtickets.entity.FlightShedule
 import com.valdizz.airtickets.entity.FlightType
