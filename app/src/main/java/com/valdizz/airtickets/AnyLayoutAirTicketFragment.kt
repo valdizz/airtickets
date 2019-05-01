@@ -1,24 +1,44 @@
 package com.valdizz.airtickets
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.valdizz.airtickets.entity.ChangeDayNightModeListener
 import com.valdizz.airtickets.entity.FlightShedule
+import kotlinx.android.synthetic.main.fragment_anylayout_airticket.*
 import kotlinx.android.synthetic.main.fragment_constraint_airticket.view.*
 
 /**
  * Fragment class. The fragment layout uses any group layouts exclude ConstraintLayout.
+ * Floating action button can change day/night theme.
  *
  * @author Vlad Kornev
  */
 class AnyLayoutAirTicketFragment : Fragment() {
 
+    private var changeDayNightModeListener: ChangeDayNightModeListener? = null
+
+    override fun onAttach(context: Context?) {
+        super.onAttach(context)
+        if (context is ChangeDayNightModeListener) {
+            changeDayNightModeListener = context
+        }
+        else {
+            throw ClassCastException(context.toString() + " must implement ChangeDayNightModeListener.")
+        }
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_anylayout_airticket, container, false)
         arguments?.get(AirTicketActivity.FLIGHT_AGRS_KEY)?.let { setViewData(it as FlightShedule, view) }
         return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        fab.setOnClickListener { changeDayNightModeListener?.onChangeDayNightMode() }
     }
 
     private fun setViewData(flightShedule: FlightShedule, view: View) {

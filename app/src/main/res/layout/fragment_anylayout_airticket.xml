@@ -17,7 +17,7 @@
         <TextView
                 android:id="@+id/tv_depart_title"
                 tools:text="DEPART"
-                android:textColor="@color/colorDarkBlue"
+                android:textColor="@color/colorRed"
                 android:textSize="@dimen/text_big"
                 android:textStyle="bold"
                 android:layout_width="wrap_content"
@@ -352,7 +352,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
-            app:backgroundTint="@color/colorGreen"
+            app:backgroundTint="@color/colorButtonBackground"
             app:srcCompat="@drawable/ic_check_white_24dp"
             android:layout_marginTop="@dimen/activity_fab_top_margin"
             android:layout_marginBottom="@dimen/activity_fab_bottom_margin"

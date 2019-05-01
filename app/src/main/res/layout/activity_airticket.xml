@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_shape"
             android:text="@string/fragment_1"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorButtonText"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_shape"
             android:text="@string/fragment_2"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorButtonText"
             android:layout_marginBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-
                 app:layout_constraintBottom_toTopOf="@+id/fab">
 
         </FrameLayout>

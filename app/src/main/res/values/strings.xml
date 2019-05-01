@@ -12,4 +12,6 @@
     <string name="return_trending">Return trending</string>
     <string name="return_land">Return land</string>
     <string name="return_flight_time">Return flight time</string>
+    <string name="msg_night_theme">Night Theme</string>
+    <string name="msg_day_theme">Day Theme</string>
 </resources>
