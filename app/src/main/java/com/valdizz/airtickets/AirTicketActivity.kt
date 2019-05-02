@@ -1,6 +1,6 @@
 package com.valdizz.airtickets
 
-import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -21,16 +21,11 @@ import kotlinx.android.synthetic.main.activity_airticket.*
 class AirTicketActivity : AppCompatActivity(), ChangeDayNightModeListener {
 
     private val flightData = createData()
-    private var preferences: SharedPreferences? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO)
         setContentView(R.layout.activity_airticket)
-        preferences = getSharedPreferences(AIR_TICKET_PREFERENCES, MODE_PRIVATE)
-        if (preferences?.contains(DAY_NIGHT_MODE) == true) {
-            val mode = preferences?.getInt(DAY_NIGHT_MODE, AppCompatDelegate.MODE_NIGHT_NO)
-            AppCompatDelegate.setDefaultNightMode(mode ?: AppCompatDelegate.MODE_NIGHT_NO)
-        }
         btn_fragment_constraint.setOnClickListener { replaceFragmentToConstraint() }
         btn_fragment_any.setOnClickListener { replaceFragmentToAny() }
         if (savedInstanceState == null) {
@@ -53,18 +48,18 @@ class AirTicketActivity : AppCompatActivity(), ChangeDayNightModeListener {
     }
 
     override fun onChangeDayNightMode() {
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            Toast.makeText(this, getString(R.string.msg_day_theme), Toast.LENGTH_SHORT).show()
+        when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+            Configuration.UI_MODE_NIGHT_NO, Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                delegate.setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                Toast.makeText(this, getString(R.string.msg_night_theme), Toast.LENGTH_SHORT).show()
+            }
+            Configuration.UI_MODE_NIGHT_YES -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                delegate.setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                Toast.makeText(this, getString(R.string.msg_day_theme), Toast.LENGTH_SHORT).show()
+            }
         }
-        else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            Toast.makeText(this, getString(R.string.msg_night_theme), Toast.LENGTH_SHORT).show()
-        }
-        preferences?.edit()
-            ?.putInt(DAY_NIGHT_MODE, AppCompatDelegate.getDefaultNightMode())
-            ?.apply()
-        recreate()
     }
 
     inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> FragmentTransaction) {
@@ -74,7 +69,5 @@ class AirTicketActivity : AppCompatActivity(), ChangeDayNightModeListener {
     companion object{
         const val FLIGHT_AGRS_KEY = "FlightArguments"
         private const val CONSTRAINT_TAG = "ConstraintFragmentTag"
-        private const val AIR_TICKET_PREFERENCES = "Settings"
-        private const val DAY_NIGHT_MODE = "DayNightMode"
     }
 }
